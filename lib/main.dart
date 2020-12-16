@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_codewars_practices/excercises/pyramid_array.dart';
+import 'package:flutter_codewars_practices/excercises/pyramid_array/pyramid_array.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_codewars_practices/excercises/widgets/best_answer.dart';
-import 'package:flutter_codewars_practices/excercises/widgets/description.dart';
-import 'package:flutter_codewars_practices/excercises/widgets/my_answer.dart';
+import 'package:flutter_codewars_practices/excercises/pyramid_array/widgets/best_answer.dart';
+import 'package:flutter_codewars_practices/excercises/pyramid_array/widgets/description.dart';
+import 'package:flutter_codewars_practices/excercises/pyramid_array/widgets/my_answer.dart';
 
 class PyramidArray extends StatefulWidget {
   const PyramidArray();
