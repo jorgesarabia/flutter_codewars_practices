@@ -1,21 +1,29 @@
-// import "package:test/test.dart";
-// import "package:solution/solution.dart";
+import 'package:flutter_codewars_practices/excercises/pyramid_array/solutions/best_answer.dart';
+import 'package:flutter_test/flutter_test.dart';
 
-// void main() {
-//   void tester(int n, List<List<int>> exp) => test("Testing for $n", () => expect(pyramid(n), equals(exp)));
-//   group('basic tests', () {
-//     tester(0, []);
-//     tester(1, [
-//       [1]
-//     ]);
-//     tester(2, [
-//       [1],
-//       [1, 1]
-//     ]);
-//     tester(3, [
-//       [1],
-//       [1, 1],
-//       [1, 1, 1]
-//     ]);
-//   });
-// }
+void main() {
+  test('Testing for n = 0, 1, 2 and 3', () {
+    expect(pyramid(0), equals([]));
+    expect(
+      pyramid(1),
+      equals([
+        [1]
+      ]),
+    );
+    expect(
+      pyramid(2),
+      equals([
+        [1],
+        [1, 1]
+      ]),
+    );
+    expect(
+      pyramid(3),
+      equals([
+        [1],
+        [1, 1],
+        [1, 1, 1]
+      ]),
+    );
+  });
+}

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_codewars_practices/excercises/pyramid_array/solutions/best_answer.dart';
 
 class TestCode extends StatefulWidget {
   @override
@@ -74,6 +75,4 @@ class _TestCodeState extends State<TestCode> {
   }
 
   String showSolution(int n) => 'pyramid($n):\n\n${pyramid(n)}';
-
-  List<List<int>> pyramid(int n) => List.generate(n, (i) => List.filled(i + 1, 1));
 }
