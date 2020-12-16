@@ -23,16 +23,6 @@ class _PyramidArrayState extends State<PyramidArray> {
           children: [
             PyramidDescription(),
             BestAnswer(),
-            // MyAnswer(),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(vertical: 15.0),
-            //   child: Text(
-            //     "I did't know the function 'filled' 🙏",
-            //     style: TextStyle(
-            //       fontSize: 20.0,
-            //     ),
-            //   ),
-            // ),
             RaisedButton(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(18.0),
