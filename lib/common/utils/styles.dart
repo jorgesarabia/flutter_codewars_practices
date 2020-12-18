@@ -45,4 +45,14 @@ class Styles {
       ),
     );
   }
+
+  static TextSpan green(String text, {double fontSize = 14.0}) {
+    return TextSpan(
+      text: text,
+      style: TextStyle(
+        fontSize: fontSize,
+        color: Colors.green,
+      ),
+    );
+  }
 }
