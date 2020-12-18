@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/solutions/best_answer.dart';
 
-class TestCode extends StatefulWidget {
+class PyramidImpl extends StatefulWidget {
   @override
-  _TestCodeState createState() => _TestCodeState();
+  _PyramidImpl createState() => _PyramidImpl();
 }
 
-class _TestCodeState extends State<TestCode> {
+class _PyramidImpl extends State<PyramidImpl> {
   String solution = '';
   String error = '';
 

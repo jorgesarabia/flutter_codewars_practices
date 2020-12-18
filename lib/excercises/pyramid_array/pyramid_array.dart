@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_codewars_practices/excercises/pyramid_array/test_code.dart';
+import 'package:flutter_codewars_practices/excercises/pyramid_array/pyramid_impl.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/widgets/best_answer.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/widgets/description.dart';
 
@@ -36,7 +36,7 @@ class _PyramidArrayState extends State<PyramidArray> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TestCode()),
+                  MaterialPageRoute(builder: (context) => PyramidImpl()),
                 );
               },
             ),
