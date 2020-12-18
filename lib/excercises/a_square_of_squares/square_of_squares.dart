@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/common/styles.dart';
-import 'package:flutter_codewars_practices/excercises/pyramid_array/pyramid_impl.dart';
+import 'package:flutter_codewars_practices/excercises/a_square_of_squares/widgets/description.dart';
 import 'package:flutter_codewars_practices/common/widgets/best_answer.dart';
-import 'package:flutter_codewars_practices/excercises/pyramid_array/widgets/description.dart';
 
-class PyramidArray extends StatelessWidget {
-  const PyramidArray();
+class SqueareOfSquares extends StatelessWidget {
+  const SqueareOfSquares();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pyramid Array'),
+        title: Text('A square of squares'),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            PyramidDescription(),
+            SquareDescription(),
             BestAnswer(
               code: <TextSpan>[
                 Styles.blue('List'),
@@ -34,24 +33,6 @@ class PyramidArray extends StatelessWidget {
                 Styles.white('));'),
                 Styles.white('\n}'),
               ],
-            ),
-            RaisedButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(18.0),
-                side: BorderSide(color: Colors.black),
-              ),
-              color: Colors.black,
-              textColor: Colors.white,
-              child: Text(
-                'Test',
-                style: TextStyle(fontSize: 14),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => PyramidImpl()),
-                );
-              },
             ),
           ],
         ),

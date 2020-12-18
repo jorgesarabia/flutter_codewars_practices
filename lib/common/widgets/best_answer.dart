@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/common/styles.dart';
 
 class BestAnswer extends StatelessWidget {
+  const BestAnswer({@required this.code});
+
+  final List<TextSpan> code;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -28,22 +32,7 @@ class BestAnswer extends StatelessWidget {
               child: RichText(
                 text: TextSpan(
                   style: Styles.normal,
-                  children: <TextSpan>[
-                    Styles.blue('List'),
-                    Styles.white('<'),
-                    Styles.blue('List'),
-                    Styles.white('<int>> pyramid(int n) {\n'),
-                    Styles.purple('\t\t return '),
-                    Styles.blue('List'),
-                    Styles.white('.generate(n, (i) => '),
-                    Styles.blue('List'),
-                    Styles.white('.filled(i + '),
-                    Styles.orange('1'),
-                    Styles.white(','),
-                    Styles.orange('1'),
-                    Styles.white('));'),
-                    Styles.white('\n}'),
-                  ],
+                  children: code,
                 ),
               ),
             ),
