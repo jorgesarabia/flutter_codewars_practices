@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_codewars_practices/common/styles.dart';
+import 'package:flutter_codewars_practices/common/utils/styles.dart';
 
 class BestAnswer extends StatelessWidget {
   const BestAnswer({@required this.code});

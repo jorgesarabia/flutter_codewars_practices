@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_codewars_practices/common/styles.dart';
+import 'package:flutter_codewars_practices/common/utils/styles.dart';
 import 'package:flutter_codewars_practices/excercises/a_square_of_squares/widgets/description.dart';
 import 'package:flutter_codewars_practices/common/widgets/best_answer.dart';
 
