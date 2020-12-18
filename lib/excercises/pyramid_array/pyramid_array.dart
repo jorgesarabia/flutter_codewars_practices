@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/common/utils/styles.dart';
+import 'package:flutter_codewars_practices/common/widgets/test_button.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/pyramid_impl.dart';
 import 'package:flutter_codewars_practices/common/widgets/best_answer.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/widgets/description.dart';
@@ -35,24 +36,7 @@ class PyramidArray extends StatelessWidget {
                 Styles.white('\n}'),
               ],
             ),
-            RaisedButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(18.0),
-                side: BorderSide(color: Colors.black),
-              ),
-              color: Colors.black,
-              textColor: Colors.white,
-              child: Text(
-                'Test',
-                style: TextStyle(fontSize: 14),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => PyramidImpl()),
-                );
-              },
-            ),
+            TestButton(page: PyramidImpl()),
           ],
         ),
       ),
