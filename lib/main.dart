@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/excercises/a_square_of_squares/square_of_squares.dart';
 import 'package:flutter_codewars_practices/excercises/count_the_duplicates/count_the_duplicates.dart';
+import 'package:flutter_codewars_practices/excercises/going_to_cinema/going_to_cinema.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/pyramid_array.dart';
 
 void main() {
@@ -43,6 +44,11 @@ class MyHomePage extends StatelessWidget {
       description:
           'Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.',
       page: CountTheDuplicates(),
+    ),
+    const _Exercise(
+      title: 'Going to the cinema',
+      description: 'My friend John likes to go to the cinema. He can choose between system A and system B.',
+      page: GoingToCinema(),
     ),
   ];
 

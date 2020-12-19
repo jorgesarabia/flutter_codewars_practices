@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
 class ExampleSection extends StatelessWidget {
-  ExampleSection({@required this.exampleItems});
+  ExampleSection({
+    @required this.exampleItems,
+    this.label = 'Examples',
+    this.textSize = 20.0,
+  });
 
   final List<String> exampleItems;
+  final String label;
+  final double textSize;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +21,7 @@ class ExampleSection extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            'Examples',
+            label,
             style: TextStyle(
               fontSize: 20,
               color: Colors.black,
@@ -44,13 +50,24 @@ class ExampleSection extends StatelessWidget {
     );
   }
 
-  List<Widget> items(List<String> examples) => examples.map((e) => _ExampleItem(e)).toList();
+  List<Widget> items(List<String> examples) {
+    return examples.map((e) {
+      return _ExampleItem(
+        example: e,
+        textSize: textSize,
+      );
+    }).toList();
+  }
 }
 
 class _ExampleItem extends StatelessWidget {
-  const _ExampleItem(this.example);
+  const _ExampleItem({
+    @required this.example,
+    @required this.textSize,
+  });
 
   final String example;
+  final double textSize;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +76,7 @@ class _ExampleItem extends StatelessWidget {
       child: Text(
         example,
         style: TextStyle(
-          fontSize: 20,
+          fontSize: textSize,
           color: Colors.white,
         ),
       ),
