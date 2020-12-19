@@ -1,19 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_codewars_practices/excercises/a_square_of_squares/solutions/best_answer.dart';
 
-class SquareImpl extends StatefulWidget {
+class ImplementationPage extends StatefulWidget {
+  const ImplementationPage({
+    this.inputType,
+    this.inputLabel = 'Enter a String',
+    @required this.solution,
+  });
+
+  final TextInputType inputType;
+  final String inputLabel;
+  final String Function(String) solution;
+
   @override
-  _SquareImplState createState() => _SquareImplState();
+  _ImplementationPageState createState() => _ImplementationPageState();
 }
 
-class _SquareImplState extends State<SquareImpl> {
+class _ImplementationPageState extends State<ImplementationPage> {
   String solution = '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Test Code'),
+        title: Text('Implementation'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -21,15 +30,14 @@ class _SquareImplState extends State<SquareImpl> {
           child: Column(
             children: [
               TextField(
-                keyboardType: TextInputType.numberWithOptions(signed: true),
+                keyboardType: widget.inputType,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Enter a number',
+                  labelText: widget.inputLabel,
                 ),
-                onChanged: (String number) {
-                  final n = int.parse(number);
+                onChanged: (String text) {
                   setState(() {
-                    solution = showSolution(n);
+                    solution = widget.solution(text);
                   });
                 },
               ),
@@ -60,6 +68,4 @@ class _SquareImplState extends State<SquareImpl> {
       ),
     );
   }
-
-  String showSolution(int n) => '$n => ${isSquare(n)}';
 }

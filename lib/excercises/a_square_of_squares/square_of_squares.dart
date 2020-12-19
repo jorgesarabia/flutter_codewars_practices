@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/common/utils/styles.dart';
+import 'package:flutter_codewars_practices/common/widgets/implementation_page.dart';
 import 'package:flutter_codewars_practices/common/widgets/test_button.dart';
-import 'package:flutter_codewars_practices/excercises/a_square_of_squares/square_impl.dart';
+import 'package:flutter_codewars_practices/excercises/a_square_of_squares/solutions/best_answer.dart';
 import 'package:flutter_codewars_practices/excercises/a_square_of_squares/widgets/description.dart';
 import 'package:flutter_codewars_practices/common/widgets/best_answer.dart';
 
@@ -30,7 +31,13 @@ class SqueareOfSquares extends StatelessWidget {
                 Styles.white(';\n'),
               ],
             ),
-            TestButton(page: SquareImpl()),
+            TestButton(
+              page: ImplementationPage(
+                inputType: TextInputType.numberWithOptions(signed: true),
+                inputLabel: 'Enter a number',
+                solution: (String n) => '$n => ${isSquare(int.parse(n))}',
+              ),
+            ),
           ],
         ),
       ),

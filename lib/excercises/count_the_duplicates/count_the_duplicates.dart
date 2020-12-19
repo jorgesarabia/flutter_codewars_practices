@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/common/utils/styles.dart';
 import 'package:flutter_codewars_practices/common/widgets/best_answer.dart';
+import 'package:flutter_codewars_practices/common/widgets/implementation_page.dart';
 import 'package:flutter_codewars_practices/common/widgets/test_button.dart';
-import 'package:flutter_codewars_practices/excercises/count_the_duplicates/count_duplicates_impl.dart';
+import 'package:flutter_codewars_practices/excercises/count_the_duplicates/solutions/my_answer.dart';
 import 'package:flutter_codewars_practices/excercises/count_the_duplicates/widgets/description.dart';
 
 class CountTheDuplicates extends StatelessWidget {
@@ -39,7 +40,11 @@ class CountTheDuplicates extends StatelessWidget {
                 Styles.white('\n}'),
               ],
             ),
-            TestButton(page: CountDuplicatesImpl()),
+            TestButton(
+              page: ImplementationPage(
+                solution: (String text) => "'$text' => ${duplicateCount(text)}",
+              ),
+            ),
           ],
         ),
       ),
