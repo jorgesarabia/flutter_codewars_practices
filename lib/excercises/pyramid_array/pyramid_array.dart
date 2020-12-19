@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/common/utils/styles.dart';
+import 'package:flutter_codewars_practices/common/widgets/implementation_page.dart';
 import 'package:flutter_codewars_practices/common/widgets/test_button.dart';
-import 'package:flutter_codewars_practices/excercises/pyramid_array/pyramid_impl.dart';
 import 'package:flutter_codewars_practices/common/widgets/best_answer.dart';
+import 'package:flutter_codewars_practices/excercises/pyramid_array/solutions/best_answer.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/widgets/description.dart';
 
 class PyramidArray extends StatelessWidget {
@@ -36,7 +37,13 @@ class PyramidArray extends StatelessWidget {
                 Styles.white('\n}'),
               ],
             ),
-            TestButton(page: PyramidImpl()),
+            TestButton(
+              page: ImplementationPage(
+                inputType: TextInputType.number,
+                inputLabel: 'Enter a number',
+                solution: (String n) => 'pyramid($n):\n\n${pyramid(int.parse(n))}',
+              ),
+            ),
           ],
         ),
       ),
