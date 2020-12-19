@@ -3,6 +3,7 @@ import 'package:flutter_codewars_practices/common/utils/styles.dart';
 import 'package:flutter_codewars_practices/common/widgets/best_answer.dart';
 import 'package:flutter_codewars_practices/common/widgets/implementation_page.dart';
 import 'package:flutter_codewars_practices/common/widgets/test_button.dart';
+import 'package:flutter_codewars_practices/excercises/going_to_cinema/going_to_cinema_impl.dart';
 import 'package:flutter_codewars_practices/excercises/going_to_cinema/widgets/description.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/solutions/best_answer.dart';
 
@@ -45,13 +46,7 @@ class GoingToCinema extends StatelessWidget {
                 Styles.white('\n}'),
               ],
             ),
-            TestButton(
-              page: ImplementationPage(
-                inputType: TextInputType.number,
-                inputLabel: 'Enter a number',
-                solution: (String n) => 'pyramid($n):\n\n${pyramid(int.parse(n))}',
-              ),
-            ),
+            TestButton(page: GoingToCinemaImpl()),
           ],
         ),
       ),
