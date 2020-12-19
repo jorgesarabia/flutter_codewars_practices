@@ -2,16 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/common/utils/styles.dart';
 
 class BestAnswer extends StatelessWidget {
-  const BestAnswer({@required this.code});
+  const BestAnswer({
+    @required this.code,
+    this.title = 'Best Answer',
+  });
 
   final List<TextSpan> code;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Text(
-          'Best Answer',
+          title,
           style: TextStyle(
             fontSize: 20,
             color: Colors.black,

@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/excercises/a_square_of_squares/square_of_squares.dart';
+import 'package:flutter_codewars_practices/excercises/count_the_duplicates/count_the_duplicates.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/pyramid_array.dart';
 
 void main() {
@@ -36,6 +37,12 @@ class MyHomePage extends StatelessWidget {
       title: 'Pyramid Array',
       description: 'Write a function that when given a number >= 0, returns an Array of ascending length subarrays.',
       page: PyramidArray(),
+    ),
+    const _Exercise(
+      title: 'Count the number of Duplicates',
+      description:
+          'Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.',
+      page: CountTheDuplicates(),
     ),
   ];
 
