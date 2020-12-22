@@ -5,6 +5,7 @@ import 'package:flutter_codewars_practices/excercises/a_square_of_squares/square
 import 'package:flutter_codewars_practices/excercises/count_the_duplicates/count_the_duplicates.dart';
 import 'package:flutter_codewars_practices/excercises/going_to_cinema/going_to_cinema.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/pyramid_array.dart';
+import 'package:flutter_codewars_practices/excercises/word_values/word_values.dart';
 
 void main() {
   runApp(MyApp());
@@ -49,6 +50,11 @@ class MyHomePage extends StatelessWidget {
       title: 'Going to the cinema',
       description: 'My friend John likes to go to the cinema. He can choose between system A and system B.',
       page: GoingToCinema(),
+    ),
+    const _Exercise(
+      title: 'Word values',
+      description: 'My friend John likes to go to the cinema. He can choose between system A and system B.',
+      page: WordValues(),
     ),
   ];
 

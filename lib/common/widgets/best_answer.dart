@@ -7,7 +7,7 @@ class BestAnswer extends StatelessWidget {
     this.title = 'Best Answer',
   });
 
-  final List<TextSpan> code;
+  final List<InlineSpan> code;
   final String title;
 
   @override
