@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/excercises/a_square_of_squares/square_of_squares.dart';
 import 'package:flutter_codewars_practices/excercises/count_the_duplicates/count_the_duplicates.dart';
 import 'package:flutter_codewars_practices/excercises/going_to_cinema/going_to_cinema.dart';
+import 'package:flutter_codewars_practices/excercises/pi_approximation/pi_approximation.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/pyramid_array.dart';
 import 'package:flutter_codewars_practices/excercises/triangular_treasure/triangular_treasure.dart';
 import 'package:flutter_codewars_practices/excercises/word_values/word_values.dart';
@@ -32,8 +33,7 @@ class MyHomePage extends StatelessWidget {
   static const excercises = [
     _Exercise(
       title: 'A square of squares',
-      description:
-          "You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!\nHowever, sometimes, you can't arrange them into a square. Instead, you end up with an ordinary rectangle! Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! You just have to check if your number of building blocks is a perfect square.",
+      description: "You like building blocks. You especially like building blocks that are squares. And what you .",
       page: SqueareOfSquares(),
     ),
     _Exercise(
@@ -43,8 +43,7 @@ class MyHomePage extends StatelessWidget {
     ),
     _Exercise(
       title: 'Count the number of Duplicates',
-      description:
-          'Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.',
+      description: 'Write a function that will return the count of distinct case-insensitive alphabetic characters ',
       page: CountTheDuplicates(),
     ),
     _Exercise(
@@ -59,9 +58,13 @@ class MyHomePage extends StatelessWidget {
     ),
     _Exercise(
       title: 'Triangular Treasure',
-      description:
-          'Triangular numbers are so called because of the equilateral triangular shape that they occupy when laid out as dots. i.e.',
+      description: 'Triangular numbers are so called because of the equilateral triangular shape that they occupy ',
       page: TriangularTreasure(),
+    ),
+    _Exercise(
+      title: 'PI Approximation',
+      description: 'The aim of the kata is to try to show how difficult it can be to calculate decimals of an ',
+      page: PiApproximation(),
     ),
   ];
 
