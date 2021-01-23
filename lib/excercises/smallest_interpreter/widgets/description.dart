@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/common/utils/styles.dart';
 import 'package:flutter_codewars_practices/common/widgets/black_section.dart';
 import 'package:flutter_codewars_practices/common/widgets/bordered_comment.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class SmallestInterpreterDescription extends StatelessWidget {
   @override
