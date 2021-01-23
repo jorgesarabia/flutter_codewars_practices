@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/common/widgets/implementation_page.dart';
 import 'package:flutter_codewars_practices/common/widgets/test_button.dart';
+import 'package:flutter_codewars_practices/excercises/smallest_interpreter/solutions/my_answer.dart';
 import 'package:flutter_codewars_practices/excercises/smallest_interpreter/widgets/description.dart';
 
 class SmallestInterpreter extends StatelessWidget {
@@ -18,9 +19,19 @@ class SmallestInterpreter extends StatelessWidget {
             SmallestInterpreterDescription(),
             TestButton(
               page: ImplementationPage(
-                inputType: TextInputType.number,
-                inputLabel: 'Enter a number',
-                solution: (String n) => 'pyramid($n):\n\n$n',
+                inputLabel: 'Enter a code and input (separate them with *)',
+                solution: (String n) {
+                  // final code = n.split('*').first.trim();
+                  // final input = n.split('*').last.trim();
+
+                  final code = ",+[-.,+]";
+                  final input = "Codewars${new String.fromCharCode(255)}";
+
+                  //final code = ",.>,.>,.>,.";
+                  //final input = "Hola";
+
+                  return 'brainLuck($code, $input):\n\n${brainLuck(code, input)}';
+                },
               ),
             ),
           ],
