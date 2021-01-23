@@ -6,6 +6,7 @@ import 'package:flutter_codewars_practices/excercises/count_the_duplicates/count
 import 'package:flutter_codewars_practices/excercises/going_to_cinema/going_to_cinema.dart';
 import 'package:flutter_codewars_practices/excercises/pi_approximation/pi_approximation.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/pyramid_array.dart';
+import 'package:flutter_codewars_practices/excercises/smallest_interpreter/smallest_interpreter.dart';
 import 'package:flutter_codewars_practices/excercises/triangular_treasure/triangular_treasure.dart';
 import 'package:flutter_codewars_practices/excercises/word_values/word_values.dart';
 
@@ -65,6 +66,11 @@ class MyHomePage extends StatelessWidget {
       title: 'PI Approximation',
       description: 'The aim of the kata is to try to show how difficult it can be to calculate decimals of an ',
       page: PiApproximation(),
+    ),
+    _Exercise(
+      title: 'My smallest code interpreter Brainfuck',
+      description: 'Inspired from real-world Brainf**k, we want to create an interpreter of that language which  ',
+      page: SmallestInterpreter(),
     ),
   ];
 

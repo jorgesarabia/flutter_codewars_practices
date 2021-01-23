@@ -1,0 +1,95 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_codewars_practices/common/utils/styles.dart';
+import 'package:flutter_codewars_practices/common/widgets/black_section.dart';
+import 'package:flutter_codewars_practices/common/widgets/bordered_comment.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+class SmallestInterpreterDescription extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          BlackSection(
+            children: [
+              Styles.white('Inspired from real-world '),
+              Styles.link(
+                'https://en.wikipedia.org/wiki/Brainfuck',
+                label: 'Brainf**k',
+              ),
+              Styles.white(', we want to create an interpreter of that language which '),
+              Styles.white('will support the following instructions:\n\n'),
+              WidgetSpan(child: BorderedComment('>')),
+              Styles.white(' increment the data pointer (to point to the next cell to the right).\n\n'),
+              WidgetSpan(child: BorderedComment('<')),
+              Styles.white(' decrement the data pointer (to point to the next cell to the left).\n\n'),
+              WidgetSpan(child: BorderedComment('+')),
+              Styles.white('  increment (increase by one, truncate overflow: 255 + 1 = 0) '),
+              Styles.white('the byte at the data pointer.\n\n'),
+              WidgetSpan(child: BorderedComment('-')),
+              Styles.white(' decrement (decrease by one, treat as unsigned byte: 0 - 1 = 255 ) '),
+              Styles.white(' the byte at the data pointer.\n\n'),
+              WidgetSpan(child: BorderedComment('.')),
+              Styles.white(' output the byte at the data pointer.\n\n'),
+              WidgetSpan(child: BorderedComment(',')),
+              Styles.white(' accept one byte of input, storing its value in the byte at the data '),
+              Styles.white('pointer.\n\n'),
+              WidgetSpan(child: BorderedComment('[')),
+              Styles.white(' if the byte at the data pointer is zero, then instead of moving the '),
+              Styles.white('instruction pointer forward to the next command, jump it forward to '),
+              Styles.white('the command after the matching '),
+              WidgetSpan(child: BorderedComment(']')),
+              Styles.white(' command.\n\n'),
+              WidgetSpan(child: BorderedComment(']')),
+              Styles.white(' if the byte at the data pointer is nonzero, then instead of moving the '),
+              Styles.white('instruction pointer forward to the next command, jump it back to the '),
+              Styles.white('command after the matching '),
+              WidgetSpan(child: BorderedComment('[')),
+              Styles.white(' command.\n\n\n\n'),
+              Styles.white('The function will take in input...\n\n'),
+              Styles.white('\u2022 '),
+              Styles.white('the program code, a string with the sequence of '),
+              Styles.white('machine instructions,\n\n'),
+              Styles.white('\u2022 '),
+              Styles.white('the program input, a string, eventually empty, that will be '),
+              Styles.white("interpreted as an array of bytes using each character's ASCII "),
+              Styles.white('code and will be consumed by the '),
+              WidgetSpan(child: BorderedComment(',')),
+              Styles.white(' instruction\n\n\n'),
+              Styles.white('... and will return ...\n\n'),
+              Styles.white('\u2022 '),
+              Styles.white('the output of the interpreted code (always as a string), '),
+              Styles.white('produced by the '),
+              WidgetSpan(child: BorderedComment('.')),
+              Styles.white(' instruction.\n\n\n\n'),
+              Styles.white('Implementation-specific details for this Kata:\n\n'),
+              Styles.white('\u2022 '),
+              Styles.white('Your memory tape should be large enough - the original '),
+              Styles.white('implementation had 30,000 cells but a few thousand should '),
+              Styles.white('suffice for this Kata\n\n'),
+              Styles.white('\u2022 '),
+              Styles.white('Each cell should hold an unsigned byte with wrapping behavior '),
+              Styles.white('(i.e. 255 + 1 = 0, 0 - 1 = 255), initialized to 0\n\n'),
+              Styles.white('\u2022 '),
+              Styles.white('The memory pointer should initially point to a cell in the tape '),
+              Styles.white('with a sufficient number (e.g. a few thousand or more) of cells '),
+              Styles.white('to its right. For convenience, you may want to have it point to '),
+              Styles.white('the leftmost cell initially\n\n'),
+              Styles.white('\u2022 '),
+              Styles.white('You may assume that the , command will never be invoked when the '),
+              Styles.white('input stream is exhausted\n\n'),
+              Styles.white('\u2022 '),
+              Styles.white('Error-handling, e.g. unmatched square brackets and/or memory '),
+              Styles.white('pointer going past the leftmost cell is not required in this Kata. '),
+              Styles.white('If you see test cases that require you to perform error-handling '),
+              Styles.white('then please open an Issue in the Discourse for this Kata '),
+              Styles.white("(don't forget to state which programming language you are "),
+              Styles.white('attempting this Kata in).'),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
