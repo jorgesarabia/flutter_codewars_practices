@@ -11,59 +11,65 @@ String brainLuck(String code, String input) {
     return 'The code String is not balanced';
   }
 
-  String output = '';
   final cells = List.filled(10, 0);
-  int pointer = 0;
+  final List<String> instructions = code.split('');
 
-  // TODO: Manage this with the instruction pointer to use the loops:
-  for (String instruction in code.split('')) {
-    switch (instruction) {
+  String output = '';
+  int dataPointer = 0;
+  int instructionPointer = 0;
+
+  while (instructionPointer < instructions.length) {
+    switch (instructions[instructionPointer]) {
       case '>':
-        pointer++;
-        print('pointer is $pointer');
+        dataPointer++;
+        print('dataPointer is $dataPointer');
         break;
       case '<':
-        pointer--;
-        print('pointer is $pointer');
+        dataPointer--;
+        print('dataPointer is $dataPointer');
         break;
       case '+':
-        cells[pointer] = _incrementValue(cells[pointer]);
-        print("cells[$pointer] = ${cells[pointer]}");
+        cells[dataPointer] = _incrementValue(cells[dataPointer]);
+        print("cells[$dataPointer] = ${cells[dataPointer]}");
         break;
       case '-':
-        cells[pointer] = _decrementValue(cells[pointer]);
-        print("cells[$pointer] = ${cells[pointer]}");
+        cells[dataPointer] = _decrementValue(cells[dataPointer]);
+        print("cells[$dataPointer] = ${cells[dataPointer]}");
         break;
       case '.':
-        output += String.fromCharCode(cells[pointer]);
+        output += String.fromCharCode(cells[dataPointer]);
         print('output => $output');
         break;
       case ',':
-        cells[pointer] = input.codeUnitAt(pointer);
-        print("cells[$pointer] = ${cells[pointer]}");
+        cells[dataPointer] = input.codeUnitAt(dataPointer);
+        print("cells[$dataPointer] = ${cells[dataPointer]}");
         break;
       case '[':
-        if (cells[pointer] == 0) {
+        if (cells[dataPointer] == 0) {
           // Go to the matching ']' command
-          pointer = tuples.getCloseOf(pointer);
+          instructionPointer = tuples.getCloseOf(instructionPointer);
+          // addOne = false;
           // } else {
-          //   pointer++;
+          //   dataPointer++;
         }
-        print('pointer is $pointer');
+        print('dataPointer is $dataPointer');
         break;
       case ']':
-        if (cells[pointer] > 0) {
+        if (cells[dataPointer] > 0) {
           // Go back to the command after the matching '[' command
-          pointer = tuples.getOpenOf(pointer);
+          instructionPointer = tuples.getOpenOf(instructionPointer);
+          // addOne = false;
           // } else {
-          //   pointer++;
+          //   dataPointer++;
         }
-        print('pointer is $pointer');
+        print('dataPointer is $dataPointer');
         break;
       default:
-        print('$instruction => Is not an instuction');
+        print('${instructions[instructionPointer]} => Is not an instuction');
         return 'The code contains an invalid instruction';
     }
+
+    instructionPointer++;
   }
 
   return output;
