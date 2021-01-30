@@ -3,10 +3,6 @@ import 'package:flutter_codewars_practices/excercises/smallest_interpreter/solut
 String brainLuck(String code, String input) {
   final tuples = Tuples(code);
 
-  print(tuples);
-  print(tuples.getCloseOf(2));
-  print(tuples.getOpenOf(7));
-
   if (!tuples.isBalanced) {
     return 'The code String is not balanced';
   }
@@ -17,6 +13,7 @@ String brainLuck(String code, String input) {
   String output = '';
   int dataPointer = 0;
   int instructionPointer = 0;
+  int inputPointer = 0;
 
   while (instructionPointer < instructions.length) {
     switch (instructions[instructionPointer]) {
@@ -41,26 +38,19 @@ String brainLuck(String code, String input) {
         print('output => $output');
         break;
       case ',':
-        cells[dataPointer] = input.codeUnitAt(dataPointer);
+        cells[dataPointer] = input.codeUnitAt(inputPointer);
+        inputPointer++;
         print("cells[$dataPointer] = ${cells[dataPointer]}");
         break;
       case '[':
         if (cells[dataPointer] == 0) {
-          // Go to the matching ']' command
           instructionPointer = tuples.getCloseOf(instructionPointer);
-          // addOne = false;
-          // } else {
-          //   dataPointer++;
         }
         print('dataPointer is $dataPointer');
         break;
       case ']':
         if (cells[dataPointer] > 0) {
-          // Go back to the command after the matching '[' command
           instructionPointer = tuples.getOpenOf(instructionPointer);
-          // addOne = false;
-          // } else {
-          //   dataPointer++;
         }
         print('dataPointer is $dataPointer');
         break;

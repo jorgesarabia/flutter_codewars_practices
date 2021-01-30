@@ -21,14 +21,8 @@ class SmallestInterpreter extends StatelessWidget {
               page: ImplementationPage(
                 inputLabel: 'Enter a code and input (separate them with *)',
                 solution: (String n) {
-                  // final code = n.split('*').first.trim();
-                  // final input = n.split('*').last.trim();
-
-                  final code = ",+[-.,+]";
-                  final input = "Codewars${new String.fromCharCode(255)}";
-
-                  //final code = ",.>,.>,.>,.";
-                  //final input = "Hola";
+                  final code = n.split('*').first.trim();
+                  final input = n.split('*').last.trim();
 
                   return 'brainLuck($code, $input):\n\n${brainLuck(code, input)}';
                 },
