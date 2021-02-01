@@ -21,8 +21,18 @@ class SmallestInterpreter extends StatelessWidget {
               page: ImplementationPage(
                 inputLabel: 'Enter a code and input (separate them with *)',
                 solution: (String n) {
-                  final code = n.split('*').first.trim();
-                  final input = n.split('*').last.trim();
+                  // final code = n.split('*').first.trim();
+                  // final input = n.split('*').last.trim();
+
+                  String code = '>++++[-<+++++++++++>]>,[>++++++[-<-------->]>+++++++++[-<<<[->+>+<<]>>[-<<+';
+                  code += '>>]>]<<[-<+>],]<<+++++.-----.+++++.----->-->+>+<<[-<.>>>[->+>+<<]<[->>>+<<<';
+                  code += ']>>[-<<+>>]>[->+<<<+>>]>[>>>>++++++++++<<<<[->+>>+>-[<-]<[->>+<<<<[->>>+<<<';
+                  code += ']>]<<]>+[-<+>]>>>[-]>[-<<<<+>>>>]<<<<]<[>++++++[<++++++++>-]<-.[-]<]<<<<]';
+                  String input = ',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,';
+                  input += ',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,';
+                  input += ',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,';
+                  input += ',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,';
+                  input += ',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,';
 
                   return 'brainLuck($code, $input):\n\n${brainLuck(code, input)}';
                 },

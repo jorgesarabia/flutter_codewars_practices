@@ -38,8 +38,12 @@ String brainLuck(String code, String input) {
         print('output => $output');
         break;
       case ',':
-        cells[dataPointer] = input.codeUnitAt(inputPointer);
-        inputPointer++;
+        if (inputPointer < input.length) {
+          cells[dataPointer] = input.codeUnitAt(inputPointer);
+          inputPointer++;
+        } else {
+          return output;
+        }
         print("cells[$dataPointer] = ${cells[dataPointer]}");
         break;
       case '[':
@@ -56,7 +60,7 @@ String brainLuck(String code, String input) {
         break;
       default:
         print('${instructions[instructionPointer]} => Is not an instuction');
-        return 'The code contains an invalid instruction';
+      // return 'The code contains an invalid instruction';
     }
 
     instructionPointer++;

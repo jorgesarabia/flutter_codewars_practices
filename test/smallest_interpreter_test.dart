@@ -32,4 +32,36 @@ void main() {
       String.fromCharCode(nums[0] * nums[1]),
     );
   });
+
+  test("fibonacci number", () {
+    // String instructions = '++++++++++ [->';
+    // instructions += '+++>+++++++>++++++++++>+++++++++++>++++++++++++ <<<<<';
+    // instructions += ']';
+    // instructions += '>> +++ .';
+    // instructions += '< ++ .';
+    // instructions += '>>> ++ .';
+    // instructions += '< +++++  .';
+    // instructions += '> ++++ .';
+    // instructions += '> + .';
+    // instructions += '<<<< .';
+    // instructions += '>>> .';
+    // instructions += '< - .';
+    // instructions += '--- .';
+    // instructions += '<< .';
+    // instructions += '>> + .';
+    // instructions += '> ----- .';
+    // instructions += '.';
+    // instructions += '--- .';
+    // instructions += '<<< + .';
+
+    String instructions = '>++++[-<+++++++++++>]>,[>++++++[-<-------->]>+++++++++[-<<<[->+>+<<]>>[-<<+';
+    instructions += '>>]>]<<[-<+>],]<<+++++.-----.+++++.----->-->+>+<<[-<.>>>[->+>+<<]<[->>>+<<<';
+    instructions += ']>>[-<<+>>]>[->+<<<+>>]>[>>>>++++++++++<<<<[->+>>+>-[<-]<[->>+<<<<[->>>+<<<';
+    instructions += ']>]<<]>+[-<+>]>>>[-]>[-<<<<+>>>>]<<<<]<[>++++++[<++++++++>-]<-.[-]<]<<<<]';
+
+    expect(
+      brainLuck(instructions, ''),
+      'some',
+    );
+  });
 }
