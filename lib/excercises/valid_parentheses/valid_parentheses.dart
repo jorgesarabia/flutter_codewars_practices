@@ -40,7 +40,6 @@ class ValidParentheses extends StatelessWidget {
             ),
             TestButton(
               page: ImplementationPage(
-                inputLabel: '',
                 solution: (String n) {
                   return '$n => ${validParentheses(n)}';
                 },

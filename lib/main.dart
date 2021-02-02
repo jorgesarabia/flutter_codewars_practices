@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/excercises/a_square_of_squares/square_of_squares.dart';
+import 'package:flutter_codewars_practices/excercises/build_pile_cubes/build_pile_cubes.dart';
 import 'package:flutter_codewars_practices/excercises/count_the_duplicates/count_the_duplicates.dart';
 import 'package:flutter_codewars_practices/excercises/going_to_cinema/going_to_cinema.dart';
 import 'package:flutter_codewars_practices/excercises/pi_approximation/pi_approximation.dart';
@@ -83,6 +84,11 @@ class MyHomePage extends StatelessWidget {
       title: 'Valid Parentheses',
       description: 'Write a function that takes a string of parentheses, and determines if the order ',
       page: ValidParentheses(),
+    ),
+    _Exercise(
+      title: 'Build a pile of Cubes',
+      description: 'Your task is to construct a building which will be a pile of n cubes. ',
+      page: BuildPileCubes(),
     ),
   ];
 
