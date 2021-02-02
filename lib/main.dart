@@ -5,6 +5,7 @@ import 'package:flutter_codewars_practices/excercises/a_square_of_squares/square
 import 'package:flutter_codewars_practices/excercises/count_the_duplicates/count_the_duplicates.dart';
 import 'package:flutter_codewars_practices/excercises/going_to_cinema/going_to_cinema.dart';
 import 'package:flutter_codewars_practices/excercises/pi_approximation/pi_approximation.dart';
+import 'package:flutter_codewars_practices/excercises/primes_in_numbers/primes_in_numbers.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/pyramid_array.dart';
 import 'package:flutter_codewars_practices/excercises/smallest_interpreter/smallest_interpreter.dart';
 import 'package:flutter_codewars_practices/excercises/triangular_treasure/triangular_treasure.dart';
@@ -71,6 +72,11 @@ class MyHomePage extends StatelessWidget {
       title: 'My smallest code interpreter Brainfuck',
       description: 'Inspired from real-world Brainf**k, we want to create an interpreter of that language which  ',
       page: SmallestInterpreter(),
+    ),
+    _Exercise(
+      title: 'Primes in numbers',
+      description: 'Given a positive number n > 1 find the prime factor decomposition of n. ',
+      page: PrimesInNumbers(),
     ),
   ];
 
