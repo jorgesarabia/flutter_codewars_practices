@@ -9,6 +9,7 @@ import 'package:flutter_codewars_practices/excercises/primes_in_numbers/primes_i
 import 'package:flutter_codewars_practices/excercises/pyramid_array/pyramid_array.dart';
 import 'package:flutter_codewars_practices/excercises/smallest_interpreter/smallest_interpreter.dart';
 import 'package:flutter_codewars_practices/excercises/triangular_treasure/triangular_treasure.dart';
+import 'package:flutter_codewars_practices/excercises/valid_parentheses/valid_parentheses.dart';
 import 'package:flutter_codewars_practices/excercises/word_values/word_values.dart';
 
 void main() {
@@ -77,6 +78,11 @@ class MyHomePage extends StatelessWidget {
       title: 'Primes in numbers',
       description: 'Given a positive number n > 1 find the prime factor decomposition of n. ',
       page: PrimesInNumbers(),
+    ),
+    _Exercise(
+      title: 'Valid Parentheses',
+      description: 'Write a function that takes a string of parentheses, and determines if the order ',
+      page: ValidParentheses(),
     ),
   ];
 

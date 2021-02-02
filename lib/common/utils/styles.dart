@@ -57,6 +57,16 @@ class Styles {
     );
   }
 
+  static TextSpan red(String text, {double fontSize = 14.0}) {
+    return TextSpan(
+      text: text,
+      style: TextStyle(
+        fontSize: fontSize,
+        color: Colors.red,
+      ),
+    );
+  }
+
   static WidgetSpan link(String url, {String label, double fontSize = 14.0}) {
     return WidgetSpan(
       child: GestureDetector(
