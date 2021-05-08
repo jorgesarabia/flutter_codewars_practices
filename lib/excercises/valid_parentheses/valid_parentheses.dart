@@ -7,13 +7,15 @@ import 'package:flutter_codewars_practices/excercises/valid_parentheses/solution
 import 'package:flutter_codewars_practices/excercises/valid_parentheses/widgets/description.dart';
 
 class ValidParentheses extends StatelessWidget {
-  const ValidParentheses();
+  const ValidParentheses(this.title);
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Word Values'),
+        title: Text(title),
       ),
       body: SingleChildScrollView(
         child: Column(

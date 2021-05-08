@@ -83,12 +83,17 @@ class MyHomePage extends StatelessWidget {
     _Exercise(
       title: 'Valid Parentheses',
       description: 'Write a function that takes a string of parentheses, and determines if the order ',
-      page: ValidParentheses(),
+      page: ValidParentheses('Valid Parentheses'),
     ),
     _Exercise(
       title: 'Build a pile of Cubes',
-      description: 'Your task is to construct a building which will be a pile of n cubes. ',
-      page: BuildPileCubes(),
+      description: 'Your task is to construct a building which will be a pile of n cubes... ',
+      page: BuildPileCubes('Build a pile of Cubes'),
+    ),
+    _Exercise(
+      title: 'Sum of Intervals',
+      description: 'Write a function called sumIntervals/sum_intervals() that accepts...',
+      page: BuildPileCubes('Sum of Intervals'),
     ),
   ];
 
