@@ -22,6 +22,7 @@ class BuildPileCubes extends StatelessWidget {
           children: [
             BuildPileCubesDescription(),
             BestAnswer(
+              title: 'My Answer',
               code: <InlineSpan>[
                 Styles.white('int findNb(int m) {\n'),
                 Styles.white(' int acc = '),

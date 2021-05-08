@@ -9,6 +9,7 @@ import 'package:flutter_codewars_practices/excercises/pi_approximation/pi_approx
 import 'package:flutter_codewars_practices/excercises/primes_in_numbers/primes_in_numbers.dart';
 import 'package:flutter_codewars_practices/excercises/pyramid_array/pyramid_array.dart';
 import 'package:flutter_codewars_practices/excercises/smallest_interpreter/smallest_interpreter.dart';
+import 'package:flutter_codewars_practices/excercises/sum_of_intervals/sum_of_intervals.dart';
 import 'package:flutter_codewars_practices/excercises/triangular_treasure/triangular_treasure.dart';
 import 'package:flutter_codewars_practices/excercises/valid_parentheses/valid_parentheses.dart';
 import 'package:flutter_codewars_practices/excercises/word_values/word_values.dart';
@@ -93,7 +94,7 @@ class MyHomePage extends StatelessWidget {
     _Exercise(
       title: 'Sum of Intervals',
       description: 'Write a function called sumIntervals/sum_intervals() that accepts...',
-      page: BuildPileCubes('Sum of Intervals'),
+      page: SumOfIntervals('Sum of Intervals'),
     ),
   ];
 
