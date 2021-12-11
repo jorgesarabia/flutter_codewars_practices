@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_codewars_practices/common/utils/styles.dart';
-import 'package:flutter_codewars_practices/common/widgets/bordered_comment.dart';
 import 'package:flutter_codewars_practices/common/widgets/example_section.dart';
 
 class TriangularTreasureDescription extends StatelessWidget {
