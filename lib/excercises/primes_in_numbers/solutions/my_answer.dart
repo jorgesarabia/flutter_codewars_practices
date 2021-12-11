@@ -12,27 +12,27 @@ String primeFactors(int n) {
   return output;
 }
 
-Map<String, int> _findPrimes(
-  int n,
-  Map<String, int> map, {
-  int div = 2,
-}) {
-  if (n == 1) {
-    return map;
-  }
-  if (n % div == 0) {
-    if (map.containsKey(div.toString())) {
-      map[div.toString()] = map[div.toString()] + 1;
-    } else {
-      map[div.toString()] = 1;
-    }
-    map = _findPrimes(n ~/ div, map);
-  } else {
-    map = _findPrimes(n, map, div: div + 1);
-  }
+// Map<String, int> _findPrimes(
+//   int n,
+//   Map<String, int> map, {
+//   int div = 2,
+// }) {
+//   if (n == 1) {
+//     return map;
+//   }
+//   if (n % div == 0) {
+//     if (map.containsKey(div.toString())) {
+//       map[div.toString()] = map[div.toString()] + 1;
+//     } else {
+//       map[div.toString()] = 1;
+//     }
+//     map = _findPrimes(n ~/ div, map);
+//   } else {
+//     map = _findPrimes(n, map, div: div + 1);
+//   }
 
-  return map;
-}
+//   return map;
+// }
 
 Map<String, int> _findPrimesLoop(int n) {
   final map = <String, int>{};
