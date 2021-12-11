@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_codewars_practices/common/utils/styles.dart';
 import 'package:flutter_codewars_practices/common/widgets/best_answer.dart';
 import 'package:flutter_codewars_practices/common/widgets/implementation_page.dart';
 import 'package:flutter_codewars_practices/common/widgets/test_button.dart';
