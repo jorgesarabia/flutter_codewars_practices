@@ -23,3 +23,20 @@ int sumOfIntervals(List<List<int>> intervals) {
 
   return counter;
 }
+
+int sumOfIntervalsIneskay(List<List<int>> intervals) {
+  Set<int> nums = Set();
+  for (final interval in intervals) {
+    nums.addAll(List.generate(interval[1] - interval[0], (i) => interval[0] + i));
+  }
+  return nums.length;
+}
+
+      // expect(
+      //   sumOfIntervalsIneskay([
+      //     [1, 4],
+      //     [7, 10],
+      //     [3, 5]
+      //   ]),
+      //   equals(7),
+      // );

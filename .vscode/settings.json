@@ -1,20 +1,21 @@
 {
   "editor.formatOnSave": true,
-  "dart.flutterAndroidX": true,
   "dart.previewFlutterUiGuides": true,
   "dart.previewFlutterUiGuidesCustomTracking": true,
   "dart.lineLength": 120,
   "dart.enableSdkFormatter": true,
-  "dart.previewBuildRunnerTasks": true,
-  "dart.buildRunnerAdditionalArgs": ["--delete-conflicting-outputs"],
+  "dart.buildRunnerAdditionalArgs": [
+    "--delete-conflicting-outputs"
+  ],
   "dart.warnWhenEditingFilesOutsideWorkspace": true,
-  "dart.debugExternalLibraries": false,
   "dart.debugSdkLibraries": false,
   "[dart]": {
     "editor.defaultFormatter": "Dart-Code.dart-code",
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.rulers": [120],
+    "editor.rulers": [
+      120
+    ],
     "editor.wordBasedSuggestions": true,
     "files.insertFinalNewline": true
   },
@@ -24,5 +25,4 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "formatFiles.excludePattern": "**/node_modules,**/.vscode,**/dist/**,**/.chrome,**/*.freezed.dart,**/*.g.dart,**/*.gr.dart,/lib/gen/lib/model/*.dart"
 }
