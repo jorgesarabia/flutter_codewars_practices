@@ -7,16 +7,23 @@ class TestButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(18.0),
-        side: BorderSide(color: Colors.black),
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        onPrimary: Colors.black87,
+        primary: Colors.black,
+        minimumSize: Size(88, 36),
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(18.0)),
+          side: BorderSide(color: Colors.black),
+        ),
       ),
-      color: Colors.black,
-      textColor: Colors.white,
       child: Text(
         'Test',
-        style: TextStyle(fontSize: 14),
+        style: TextStyle(
+          fontSize: 14,
+          color: Colors.white,
+        ),
       ),
       onPressed: () {
         Navigator.push(
