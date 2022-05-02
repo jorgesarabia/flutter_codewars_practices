@@ -20,5 +20,4 @@ getMesage(){
 formedMessage=$(getMesage "$1" "$(getIssue)" "$(getBranch)")
 echo -e $formedMessage
 
-
 # gitall "$(bash .vscode/testing.sh 'Message example')"  
