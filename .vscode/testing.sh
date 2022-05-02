@@ -21,3 +21,5 @@ formedMessage=$(getMesage "$1" "$(getIssue)" "$(getBranch)")
 echo -e $formedMessage
 
 
+
+
