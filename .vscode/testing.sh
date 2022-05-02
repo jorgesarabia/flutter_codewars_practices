@@ -14,7 +14,8 @@ getIssue(){
 
 getMesage(){
 	message="$1\n\nIssue: $2\nBranch: $3\n\nJorge Sarabia - jorge.sarabia@apoyomultiple.com"
-	echo -e $message
+	echo $message
 }
 
-getMesage "$1" "$(getIssue)" "$(getBranch)"
+formedMessage=$(getMesage "$1" "$(getIssue)" "$(getBranch)")
+echo -e $formedMessage
