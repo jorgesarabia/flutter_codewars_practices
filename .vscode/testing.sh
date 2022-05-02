@@ -17,4 +17,4 @@ getMesage(){
 	echo -e $message
 }
 
-gitall $(getMesage "$1" "$(getIssue)" "$(getBranch)")
+gitall $(echo getMesage "$1" "$(getIssue)" "$(getBranch)")
