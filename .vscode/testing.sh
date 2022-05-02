@@ -22,4 +22,4 @@ echo -e $formedMessage
 
 
 
-
+# gitall "$(bash .vscode/testing.sh 'Message example')"  
